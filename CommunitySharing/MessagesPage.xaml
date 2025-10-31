@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CommunitySharing.MessagesPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False">
+
+    <!-- Background Gradient -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#FFE1CC" Offset="0.0"/>
+            <GradientStop Color="#FFF5C8" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- HEADER -->
+        <Grid Padding="20,50,20,10" ColumnDefinitions="Auto,*">
+            <ImageButton Source="back_icon.png"
+                         WidthRequest="28"
+                         HeightRequest="28"
+                         BackgroundColor="Transparent"
+                         Clicked="OnBackClicked"/>
+            <Label Grid.Column="1"
+                   Text="Messages"
+                   FontAttributes="Bold"
+                   FontSize="28"
+                   VerticalOptions="Center"
+                   TextColor="Black"/>
+        </Grid>
+
+        <!-- MAIN BODY -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="20">
+
+                <!-- TABS -->
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="15" Margin="0,10,0,0">
+                    <Frame x:Name="AllMessagesTab"
+                           CornerRadius="25"
+                           Padding="25,8"
+                           BackgroundColor="White"
+                           BorderColor="#34C759"
+                           HasShadow="True">
+                        <Label Text="All Messages"
+                               TextColor="#34C759"
+                               FontAttributes="Bold"
+                               FontSize="14"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnAllMessagesTapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <Frame x:Name="RequestTab"
+                           CornerRadius="25"
+                           Padding="25,8"
+                           BackgroundColor="White"
+                           BorderColor="Black"
+                           HasShadow="True">
+                        <Label Text="Request"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               FontSize="14"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnRequestTapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </HorizontalStackLayout>
+
+                <!-- MESSAGE LIST -->
+                <CollectionView x:Name="MessagesList"
+                                SelectionMode="None"
+                                Margin="0,10,0,20">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame CornerRadius="20"
+                                   BackgroundColor="White"
+                                   HasShadow="True"
+                                   Padding="15"
+                                   Margin="0,5">
+                                <Grid ColumnDefinitions="Auto,*,Auto"
+                                      RowDefinitions="Auto,Auto"
+                                      ColumnSpacing="10">
+
+                                    <!-- PROFILE ICON -->
+                                    <Frame WidthRequest="40"
+                                           HeightRequest="40"
+                                           CornerRadius="20"
+                                           BorderColor="#CCC"
+                                           VerticalOptions="Center">
+                                        <Image Source="profile_placeholder.png"
+                                               WidthRequest="25"
+                                               HeightRequest="25"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+                                    </Frame>
+
+                                    <!-- MESSAGE DETAILS -->
+                                    <VerticalStackLayout Grid.Column="1"
+                                                         Spacing="3"
+                                                         VerticalOptions="Center">
+                                        <Label Text="{Binding Name}"
+                                               FontAttributes="Bold"
+                                               TextColor="Black"
+                                               FontSize="15"/>
+                                        <Label Text="{Binding Message}"
+                                               TextColor="#444"
+                                               FontSize="13"
+                                               LineBreakMode="TailTruncation"/>
+                                        <Label Text="{Binding Time}"
+                                               TextColor="#999"
+                                               FontSize="12"
+                                               Margin="0,2,0,0"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- BOTTOM NAVIGATION -->
+        <Grid Grid.Row="2"
+              BackgroundColor="White"
+              HeightRequest="80"
+              ColumnDefinitions="*,*,*,*"
+              Padding="15,8">
+
+            <!-- Discover -->
+            <VerticalStackLayout x:Name="DiscoverTab"
+                                 Grid.Column="0"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center">
+                <Image Source="home_icon.png" WidthRequest="28" HeightRequest="28"/>
+                <Label Text="Discover" FontSize="12" TextColor="#000" HorizontalOptions="Center"/>
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnNavDiscover"/>
+                </VerticalStackLayout.GestureRecognizers>
+            </VerticalStackLayout>
+
+            <!-- Upload -->
+            <VerticalStackLayout x:Name="UploadTab"
+                                 Grid.Column="1"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center">
+                <Image Source="upload_icon.png" WidthRequest="28" HeightRequest="28"/>
+                <Label Text="Upload" FontSize="12" TextColor="#000" HorizontalOptions="Center"/>
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnNavUpload"/>
+                </VerticalStackLayout.GestureRecognizers>
+            </VerticalStackLayout>
+
+            <!-- Message -->
+            <VerticalStackLayout x:Name="MessageTab"
+                                 Grid.Column="2"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center">
+                <Image Source="message_active.png" WidthRequest="28" HeightRequest="28"/>
+                <Label Text="Message"
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextColor="#34C759"
+                       HorizontalOptions="Center"/>
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnNavMessage"/>
+                </VerticalStackLayout.GestureRecognizers>
+            </VerticalStackLayout>
+
+            <!-- Profile -->
+            <VerticalStackLayout x:Name="ProfileTab"
+                                 Grid.Column="3"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center">
+                <Image Source="profile_icon.png" WidthRequest="28" HeightRequest="28"/>
+                <Label Text="Profile" FontSize="12" TextColor="#000" HorizontalOptions="Center"/>
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnNavProfile"/>
+                </VerticalStackLayout.GestureRecognizers>
+            </VerticalStackLayout>
+
+        </Grid>
+    </Grid>
+</ContentPage>
