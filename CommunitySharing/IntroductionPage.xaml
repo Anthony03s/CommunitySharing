@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunitySharing.IntroductionPage"
+             Title="IntroductionPage"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#D4E7C5" Offset="0.0" />
+            <GradientStop Color="#F7DCB9" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid RowDefinitions="Auto, *, Auto"
+          Padding="30"
+          RowSpacing="25">
+
+        <VerticalStackLayout Grid.Row="0"
+                             HorizontalOptions="Center"
+                             Spacing="10">
+
+            <Image
+                Source="app_logo.png"
+                HeightRequest="80"
+                WidthRequest="80" />
+
+            <Label
+                Text="Share &amp; Connect"
+                FontSize="24"
+                FontAttributes="Bold"
+                TextColor="#192a56"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Community. Sharing. Together."
+                FontSize="16"
+                TextColor="#273c75"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="1"
+                             VerticalOptions="Center"
+                             Spacing="20">
+
+            <Image
+                Source="intro_illustration.png"
+                HeightRequest="250"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Illustration of people sharing items" />
+
+            <Label
+                Text="Connect. Share. Thrive"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="#192a56"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                Text="Join your local community to share extra food, household items, and resources with neighbors. Reduce waste, build connections and help other thrive."
+                FontSize="16"
+                TextColor="#273c75"
+                HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
+
+        <Button Grid.Row="2"
+                Text="Sign Up"
+                Clicked="OnSignUpClicked"
+                BackgroundColor="#007AFF"
+                TextColor="White"
+                FontAttributes="Bold"
+                HeightRequest="50"
+                CornerRadius="25"
+                HorizontalOptions="Fill" 
+                Margin="10,0" />
+
+    </Grid>
+</ContentPage>

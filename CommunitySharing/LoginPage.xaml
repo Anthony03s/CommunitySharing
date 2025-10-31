@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunitySharing.LoginPage"
+             Title="Login"
+             Shell.NavBarIsVisible="False"
+             Background="{StaticResource AuthGradientBackground}">
+
+    <Grid RowDefinitions="Auto, *, Auto"
+          Padding="30"
+          RowSpacing="25">
+
+ 
+        <Label
+            Grid.Row="0"
+            Text="Welcome Back"
+            Style="{StaticResource AuthTitleLabel}" />
+
+        <VerticalStackLayout
+            Grid.Row="1"
+            Spacing="15"
+            VerticalOptions="Center">
+
+            <Entry
+                x:Name="EmailEntry"
+                Placeholder="Email"
+                Style="{StaticResource AuthEntry}"
+                Keyboard="Email" />
+
+            <Entry
+                x:Name="PasswordEntry"
+                Placeholder="Password"
+                Style="{StaticResource AuthEntry}"
+                IsPassword="True" />
+
+            <Label
+                Text="Forgot Password?"
+                Style="{StaticResource LinkLabel}"
+                HorizontalOptions="End"
+                Margin="0,0,5,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnForgotPasswordClicked"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Button
+                Text="Log In"
+                Style="{StaticResource PrimaryButton}"
+                Clicked="OnLoginClicked"
+                Margin="0,20,0,0" />
+
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout
+            Grid.Row="2"
+            HorizontalOptions="Center"
+            Spacing="5"
+            Margin="0,20,0,0">
+
+            <Label
+                Text="Don't have an account?"
+                Style="{StaticResource AuthFormLabel}" />
+
+            <Label
+                Text="Sign Up"
+                Style="{StaticResource LinkLabel}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSignUpClicked"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+        </HorizontalStackLayout>
+
+    </Grid>
+</ContentPage>

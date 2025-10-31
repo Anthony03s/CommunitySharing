@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunitySharing.SplashPage"
+             Title="SplashPage"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#D4E7C5" Offset="0.0" />
+            <GradientStop Color="#F7DCB9" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Spacing="20"
+        Padding="40">
+
+        <Image
+            Source="app_logo.png"
+            HeightRequest="120"
+            WidthRequest="120"
+            SemanticProperties.Description="App Logo" />
+
+        <Label
+            Text="Share &amp; Connect"
+            FontSize="32"
+            FontAttributes="Bold"
+            TextColor="#192a56"
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="Community. Sharing. Together."
+            FontSize="18"
+            TextColor="#273c75"
+            HorizontalOptions="Center" />
+
+        <ActivityIndicator
+            IsRunning="True"
+            Color="#192a56"
+            Margin="0,20,0,0" />
+
+        <Label
+            Text="Loading..."
+            FontSize="14"
+            TextColor="Gray"
+            HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>

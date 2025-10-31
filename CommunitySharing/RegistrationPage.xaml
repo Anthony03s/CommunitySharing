@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunitySharing.RegistrationPage"
+             Title="Create Account"
+             Shell.NavBarIsVisible="False"
+             Background="{StaticResource AuthGradientBackground}">
+
+    <ScrollView>
+        <Grid RowDefinitions="Auto, *, Auto"
+              Padding="30"
+              RowSpacing="25">
+
+            <Label
+                Grid.Row="0"
+                Text="Create Account"
+                Style="{StaticResource AuthTitleLabel}" />
+
+            <VerticalStackLayout
+                Grid.Row="1"
+                Spacing="15">
+
+                <Entry
+                    x:Name="FullNameEntry"
+                    Placeholder="Full Name"
+                    Style="{StaticResource AuthEntry}"
+                    Keyboard="Text" />
+
+                <Entry
+                    x:Name="EmailEntry"
+                    Placeholder="Email"
+                    Style="{StaticResource AuthEntry}"
+                    Keyboard="Email" />
+
+                <Entry
+                    x:Name="PasswordEntry"
+                    Placeholder="Password"
+                    Style="{StaticResource AuthEntry}"
+                    IsPassword="True" />
+
+                <Entry
+                    x:Name="ConfirmPasswordEntry"
+                    Placeholder="Confirm Password"
+                    Style="{StaticResource AuthEntry}"
+                    IsPassword="True" />
+
+                <HorizontalStackLayout Spacing="10" Margin="0,10">
+                    <CheckBox x:Name="TermsCheckBox" />
+                    <Label Style="{StaticResource AuthFormLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="I agree to the " />
+                                <Span Text="Terms &amp; Conditions" TextDecorations="Underline" FontAttributes="Bold" />
+                                <Span Text=" and " />
+                                <Span Text="Privacy Policy." TextDecorations="Underline" FontAttributes="Bold" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </HorizontalStackLayout>
+
+
+                <Button
+                    Text="Sign Up"
+                    Style="{StaticResource PrimaryButton}"
+                    Clicked="OnSignUpClicked"
+                    Margin="0,10,0,0" />
+
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="2"
+                HorizontalOptions="Center"
+                Spacing="5"
+                Margin="0,20,0,0">
+
+                <Label
+                    Text="Already have an account?"
+                    Style="{StaticResource AuthFormLabel}" />
+
+                <Label
+                    Text="Log In"
+                    Style="{StaticResource LinkLabel}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnLoginClicked"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+            </HorizontalStackLayout>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
