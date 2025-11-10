@@ -4,8 +4,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <LinearGradientBrush x:Key="AuthGradientBackground" StartPoint="0,0" EndPoint="1,1">
+<<<<<<< HEAD
+        <GradientStop Color="#FFE1CC" Offset="0.0"/>
+        <GradientStop Color="#FFF5C8" Offset="1.0"/>
+=======
         <GradientStop Color="#D4E7C5" Offset="0.0" />
         <GradientStop Color="#F7DCB9" Offset="1.0" />
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
     </LinearGradientBrush>
 
     <Style x:Key="AuthTitleLabel" TargetType="Label">
@@ -44,4 +49,107 @@
         <Setter Property="VerticalOptions" Value="Center" />
     </Style>
 
+<<<<<<< HEAD
+    <Style x:Key="DiscoverTitle" TargetType="Label">
+        <Setter Property="FontSize" Value="34" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="Margin" Value="0,20,0,10" />
+    </Style>
+
+    <Style x:Key="DiscoverSearchBorder" TargetType="Border">
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="Stroke" Value="#E0E0E0" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 25" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="Margin" Value="15,0,15,15" />
+        <Setter Property="Padding" Value="15,0" />
+    </Style>
+
+    <Style x:Key="FilterChip" TargetType="Border">
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="Stroke" Value="#E0E0E0" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 20" />
+        <Setter Property="HeightRequest" Value="40" />
+        <Setter Property="Padding" Value="15,0" />
+        <Setter Property="Margin" Value="0,0,8,0" />
+    </Style>
+
+    <Style x:Key="FilterChipSelected" TargetType="Border" BasedOn="{StaticResource FilterChip}">
+        <Setter Property="BackgroundColor" Value="Black" />
+        <Setter Property="StrokeThickness" Value="0" />
+    </Style>
+
+    <Style x:Key="FilterChipLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="FilterChipLabelSelected" TargetType="Label" BasedOn="{StaticResource FilterChipLabel}">
+        <Setter Property="TextColor" Value="White" />
+    </Style>
+
+    <Style x:Key="FilterChipIcon" TargetType="Path">
+        <Setter Property="Fill" Value="Black" />
+        <Setter Property="WidthRequest" Value="16" />
+        <Setter Property="HeightRequest" Value="16" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="FilterChipIconSelected" TargetType="Path" BasedOn="{StaticResource FilterChipIcon}">
+        <Setter Property="Fill" Value="White" />
+    </Style>
+
+    <Style x:Key="DiscoverItemCard" TargetType="Border">
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 20" />
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="Padding" Value="15" />
+        <Setter Property="Margin" Value="15,0,15,15" />
+        <Setter Property="HeightRequest" Value="150" />
+        <Setter Property="Shadow">
+            <Shadow Brush="Black" Offset="0,5" Radius="15" Opacity="0.1" />
+        </Setter>
+    </Style>
+
+    <Style x:Key="DiscoverItemImage" TargetType="Image">
+        <Setter Property="Aspect" Value="AspectFill" />
+        <Setter Property="HeightRequest" Value="120" />
+        <Setter Property="WidthRequest" Value="120" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="DiscoverItemTitle" TargetType="Label">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="Black" />
+    </Style>
+
+    <Style x:Key="DiscoverItemDistanceLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="#555" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="DiscoverItemStockLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="TextColor" Value="Gray" />
+    </Style>
+
+    <Style x:Key="DiscoverItemDetailsButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="#F0F0F0" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="CornerRadius" Value="15" />
+        <Setter Property="HeightRequest" Value="30" />
+        <Setter Property="Padding" Value="15,0" />
+    </Style>
+
+=======
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
 </ResourceDictionary>
