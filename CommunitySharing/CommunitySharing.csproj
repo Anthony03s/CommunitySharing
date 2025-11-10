@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+﻿<Project Sdk="Microsoft.NET.Sdk">
+=======
 <Project Sdk="Microsoft.NET.Sdk">
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
 
 	<PropertyGroup>
 		<TargetFrameworks>net9.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
@@ -64,12 +68,33 @@
 	</ItemGroup>
 
 	<ItemGroup>
+<<<<<<< HEAD
+	  <MauiXaml Update="DiscoverPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="EditProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ForgotPasswordPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+=======
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
 	  <MauiXaml Update="IntroductionPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+<<<<<<< HEAD
+	  <MauiXaml Update="MessagesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+=======
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
 	  <MauiXaml Update="RegistrationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -79,6 +104,12 @@
 	  <MauiXaml Update="SplashPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+<<<<<<< HEAD
+	  <MauiXaml Update="UploadPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+=======
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
 	</ItemGroup>
 
 </Project>

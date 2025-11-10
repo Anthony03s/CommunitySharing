@@ -2,6 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CommunitySharing.SplashPage"
+<<<<<<< HEAD
+             Shell.NavBarIsVisible="False">
+
+    <!-- Background gradient (top: peach → bottom: light yellow) -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#FFE1CC" Offset="0.0" />
+            <!-- Peach -->
+            <GradientStop Color="#FFF5C8" Offset="1.0" />
+            <!-- Light Yellow -->
+=======
              Title="SplashPage"
              Shell.NavBarIsVisible="False">
 
@@ -9,12 +20,50 @@
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="#D4E7C5" Offset="0.0" />
             <GradientStop Color="#F7DCB9" Offset="1.0" />
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
         </LinearGradientBrush>
     </ContentPage.Background>
 
     <VerticalStackLayout
         VerticalOptions="Center"
         HorizontalOptions="Center"
+<<<<<<< HEAD
+        Spacing="25">
+
+        <!-- Logo -->
+        <Image
+            Source="app_logo.png"
+            HeightRequest="110"
+            WidthRequest="110"
+            HorizontalOptions="Center" />
+
+        <!-- Title -->
+        <Label
+            Text="Share &amp; Connect"
+            FontSize="30"
+            FontAttributes="Bold"
+            TextColor="Black"
+            HorizontalOptions="Center" />
+
+        <!-- Tagline -->
+        <Label
+            Text="Community, Sharing, Together"
+            FontSize="17"
+            TextColor="Black"
+            Opacity="0.80"
+            HorizontalOptions="Center" />
+
+        <!-- Activity Indicator -->
+        <ActivityIndicator
+            IsRunning="True"
+            Color="Gray"
+            WidthRequest="40"
+            HeightRequest="40"
+            Margin="0,20,0,0"
+            HorizontalOptions="Center" />
+
+        <!-- Loading Text -->
+=======
         Spacing="20"
         Padding="40">
 
@@ -42,6 +91,7 @@
             Color="#192a56"
             Margin="0,20,0,0" />
 
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
         <Label
             Text="Loading..."
             FontSize="14"
