@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿namespace CommunitySharing;
+=======
+namespace CommunitySharing;
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
 
 public partial class RegistrationPage : ContentPage
 {
@@ -7,6 +11,7 @@ public partial class RegistrationPage : ContentPage
         InitializeComponent();
     }
 
+<<<<<<< HEAD
     // ✅ SIGN UP BUTTON CLICK HANDLER
     private async void OnSignUpClicked(object sender, EventArgs e)
     {
@@ -69,10 +74,32 @@ public partial class RegistrationPage : ContentPage
     }
 
     // ✅ LOGIN CLICK HANDLER
+=======
+    private async void OnSignUpClicked(object sender, EventArgs e)
+    {
+        if (!TermsCheckBox.IsChecked)
+        {
+            await DisplayAlert("Terms", "You must agree to the Terms & Conditions and Privacy Policy.", "OK");
+            return;
+        }
+
+        if (PasswordEntry.Text != ConfirmPasswordEntry.Text)
+        {
+            await DisplayAlert("Password Error", "Passwords do not match.", "OK");
+            return;
+        }
+
+        await DisplayAlert("Success", "Account created successfully! (Placeholder)", "OK");
+
+        await Shell.Current.GoToAsync(nameof(LoginPage));
+    }
+
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
     private async void OnLoginClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync(nameof(LoginPage));
     }
+<<<<<<< HEAD
 
     // ✅ SHOW PASSWORD CHECKBOX HANDLER
     private void OnShowPasswordCheckedChanged(object sender, CheckedChangedEventArgs e)
@@ -95,4 +122,6 @@ public partial class RegistrationPage : ContentPage
         if (string.IsNullOrEmpty(e.NewTextValue))
             ShowPasswordCheckBox.IsChecked = false;
     }
+=======
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
 }

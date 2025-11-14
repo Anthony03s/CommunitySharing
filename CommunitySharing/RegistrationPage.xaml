@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CommunitySharing.RegistrationPage"
+<<<<<<< HEAD
              Title="Registration"
              Shell.NavBarIsVisible="False">
 
@@ -19,17 +20,35 @@
               RowSpacing="25">
 
             <!-- TITLE -->
+=======
+             Title="Create Account"
+             Shell.NavBarIsVisible="False"
+             Background="{StaticResource AuthGradientBackground}">
+
+    <ScrollView>
+        <Grid RowDefinitions="Auto, *, Auto"
+              Padding="30"
+              RowSpacing="25">
+
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
             <Label
                 Grid.Row="0"
                 Text="Create Account"
                 Style="{StaticResource AuthTitleLabel}" />
 
+<<<<<<< HEAD
             <!-- FORM -->
             <VerticalStackLayout Grid.Row="1"
                                  Spacing="15"
                                  VerticalOptions="Start">
 
                 <!-- Full Name -->
+=======
+            <VerticalStackLayout
+                Grid.Row="1"
+                Spacing="15">
+
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
                 <Entry
                     x:Name="FullNameEntry"
                     Placeholder="Full Name"
@@ -46,14 +65,19 @@
                     x:Name="PasswordEntry"
                     Placeholder="Password"
                     Style="{StaticResource AuthEntry}"
+<<<<<<< HEAD
                     IsPassword="True"
                     Completed="OnPasswordCompleted"
                     TextChanged="OnPasswordTextChanged" />
+=======
+                    IsPassword="True" />
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
 
                 <Entry
                     x:Name="ConfirmPasswordEntry"
                     Placeholder="Confirm Password"
                     Style="{StaticResource AuthEntry}"
+<<<<<<< HEAD
                     IsPassword="True"
                     Completed="OnPasswordCompleted"
                     TextChanged="OnPasswordTextChanged" />
@@ -111,13 +135,49 @@
                                    HorizontalOptions="Center"
                                    Margin="0,20,0,0"
                                    Spacing="5">
+=======
+                    IsPassword="True" />
+
+                <HorizontalStackLayout Spacing="10" Margin="0,10">
+                    <CheckBox x:Name="TermsCheckBox" />
+                    <Label Style="{StaticResource AuthFormLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="I agree to the " />
+                                <Span Text="Terms &amp; Conditions" TextDecorations="Underline" FontAttributes="Bold" />
+                                <Span Text=" and " />
+                                <Span Text="Privacy Policy." TextDecorations="Underline" FontAttributes="Bold" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </HorizontalStackLayout>
+
+
+                <Button
+                    Text="Sign Up"
+                    Style="{StaticResource PrimaryButton}"
+                    Clicked="OnSignUpClicked"
+                    Margin="0,10,0,0" />
+
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="2"
+                HorizontalOptions="Center"
+                Spacing="5"
+                Margin="0,20,0,0">
+
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
                 <Label
                     Text="Already have an account?"
                     Style="{StaticResource AuthFormLabel}" />
 
                 <Label
                     Text="Log In"
+<<<<<<< HEAD
                     FontAttributes="Bold"
+=======
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
                     Style="{StaticResource LinkLabel}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnLoginClicked"/>
@@ -128,5 +188,9 @@
 
         </Grid>
     </ScrollView>
+<<<<<<< HEAD
 
 </ContentPage>
+=======
+</ContentPage>
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044

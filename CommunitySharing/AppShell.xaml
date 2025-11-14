@@ -7,6 +7,7 @@
     Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="False">
 
+<<<<<<< HEAD
     <!-- Splash Page -->
     <ShellContent
         Route="SplashPage"
@@ -35,3 +36,11 @@
     <ShellContent Route="ProfilePage" ContentTemplate="{DataTemplate local:ProfilePage}" Shell.FlyoutItemIsVisible="False"/>
 
 </Shell>
+=======
+    <ShellContent
+        Title="Welcome"
+        ContentTemplate="{DataTemplate local:SplashPage}"
+        Route="SplashPage" />
+
+</Shell>
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044

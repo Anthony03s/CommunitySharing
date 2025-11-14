@@ -4,8 +4,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <LinearGradientBrush x:Key="AuthGradientBackground" StartPoint="0,0" EndPoint="1,1">
+<<<<<<< HEAD
         <GradientStop Color="#FFE1CC" Offset="0.0"/>
         <GradientStop Color="#FFF5C8" Offset="1.0"/>
+=======
+        <GradientStop Color="#D4E7C5" Offset="0.0" />
+        <GradientStop Color="#F7DCB9" Offset="1.0" />
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
     </LinearGradientBrush>
 
     <Style x:Key="AuthTitleLabel" TargetType="Label">
@@ -44,6 +49,7 @@
         <Setter Property="VerticalOptions" Value="Center" />
     </Style>
 
+<<<<<<< HEAD
     <Style x:Key="DiscoverTitle" TargetType="Label">
         <Setter Property="FontSize" Value="34" />
         <Setter Property="FontAttributes" Value="Bold" />
@@ -144,4 +150,6 @@
         <Setter Property="Padding" Value="15,0" />
     </Style>
 
+=======
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
 </ResourceDictionary>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿namespace CommunitySharing;
+=======
+namespace CommunitySharing;
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
 
 public partial class LoginPage : ContentPage
 {
@@ -8,6 +12,7 @@ public partial class LoginPage : ContentPage
     }
 
     private async void OnLoginClicked(object sender, EventArgs e)
+<<<<<<< HEAD
     {
         ValidationMessageLabel.IsVisible = false;
 
@@ -34,15 +39,24 @@ public partial class LoginPage : ContentPage
     {
         ValidationMessageLabel.Text = message;
         ValidationMessageLabel.IsVisible = true;
+=======
+    { 
+        await DisplayAlert("Login Success", "Welcome back! (Placeholder)", "OK");
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
     }
 
     private async void OnSignUpClicked(object sender, EventArgs e)
     {
+<<<<<<< HEAD
         await Shell.Current.GoToAsync("RegistrationPage");
+=======
+        await Shell.Current.GoToAsync($"../{nameof(RegistrationPage)}");
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
     }
 
     private async void OnForgotPasswordClicked(object sender, EventArgs e)
     {
+<<<<<<< HEAD
         await Shell.Current.GoToAsync("ForgotPasswordPage");
     }
 
@@ -61,5 +75,8 @@ public partial class LoginPage : ContentPage
     {
         if (string.IsNullOrEmpty(e.NewTextValue))
             ShowPasswordCheckBox.IsChecked = false;
+=======
+        await DisplayAlert("Forgot Password", "Forgot Password functionality is not implemented yet.", "OK");
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
     }
 }

@@ -6,6 +6,7 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
 
+<<<<<<< HEAD
         // Register Navigation Routes
         Routing.RegisterRoute(nameof(IntroductionPage), typeof(IntroductionPage));
         Routing.RegisterRoute(nameof(RegistrationPage), typeof(RegistrationPage));
@@ -20,3 +21,11 @@ public partial class AppShell : Shell
     }
 
 }
+=======
+        Routing.RegisterRoute(nameof(IntroductionPage), typeof(IntroductionPage));
+        Routing.RegisterRoute(nameof(RegistrationPage), typeof(RegistrationPage));
+        Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+
+    }
+}
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
