@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -194,3 +195,201 @@
 =======
 </ContentPage>
 >>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
+=======
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunitySharing.RegistrationPage"
+<<<<<<< HEAD
+             Title="Registration"
+             Shell.NavBarIsVisible="False">
+
+    <!-- UPDATED BACKGROUND -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#FFE1CC" Offset="0.0"/>
+            <GradientStop Color="#FFF5C8" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <Grid Padding="30"
+              RowDefinitions="Auto, *, Auto"
+              RowSpacing="25">
+
+            <!-- TITLE -->
+=======
+             Title="Create Account"
+             Shell.NavBarIsVisible="False"
+             Background="{StaticResource AuthGradientBackground}">
+
+    <ScrollView>
+        <Grid RowDefinitions="Auto, *, Auto"
+              Padding="30"
+              RowSpacing="25">
+
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
+            <Label
+                Grid.Row="0"
+                Text="Create Account"
+                Style="{StaticResource AuthTitleLabel}" />
+
+<<<<<<< HEAD
+            <!-- FORM -->
+            <VerticalStackLayout Grid.Row="1"
+                                 Spacing="15"
+                                 VerticalOptions="Start">
+
+                <!-- Full Name -->
+=======
+            <VerticalStackLayout
+                Grid.Row="1"
+                Spacing="15">
+
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
+                <Entry
+                    x:Name="FullNameEntry"
+                    Placeholder="Full Name"
+                    Style="{StaticResource AuthEntry}"
+                    Keyboard="Text" />
+
+                <Entry
+                    x:Name="EmailEntry"
+                    Placeholder="Email"
+                    Style="{StaticResource AuthEntry}"
+                    Keyboard="Email" />
+
+                <Entry
+                    x:Name="PasswordEntry"
+                    Placeholder="Password"
+                    Style="{StaticResource AuthEntry}"
+<<<<<<< HEAD
+                    IsPassword="True"
+                    Completed="OnPasswordCompleted"
+                    TextChanged="OnPasswordTextChanged" />
+=======
+                    IsPassword="True" />
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
+
+                <Entry
+                    x:Name="ConfirmPasswordEntry"
+                    Placeholder="Confirm Password"
+                    Style="{StaticResource AuthEntry}"
+<<<<<<< HEAD
+                    IsPassword="True"
+                    Completed="OnPasswordCompleted"
+                    TextChanged="OnPasswordTextChanged" />
+
+                <HorizontalStackLayout Spacing="10">
+                    <CheckBox x:Name="ShowPasswordCheckBox"
+                              CheckedChanged="OnShowPasswordCheckedChanged" />
+                    <Label Text="Show Password"
+                           VerticalOptions="Center"
+                           TextColor="Black"
+                           FontSize="14" />
+                </HorizontalStackLayout>
+
+
+
+                <!-- TERMS -->
+                <HorizontalStackLayout Spacing="10" Margin="0,10">
+
+                    <CheckBox x:Name="TermsCheckBox"/>
+                    <Label Style="{StaticResource AuthFormLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="I agree to the " TextColor="Black"/>
+                                <Span Text="Terms &amp; Condition"
+                                      TextDecorations="Underline"
+                                      TextColor="#3B82F6"
+                                      FontAttributes="Bold" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                </HorizontalStackLayout>
+
+                <!-- SIGN UP BUTTON -->
+                <Button Text="Sign Up"
+                        BackgroundColor="#3B82F6"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="30"
+                        HeightRequest="55"
+                        Margin="0,15,0,0"
+                        Clicked="OnSignUpClicked"/>
+
+                <!-- Validation message -->
+                <Label x:Name="ValidationMessageLabel"
+                       TextColor="Red"
+                       FontSize="13"
+                       HorizontalOptions="Center"
+                       IsVisible="False"
+                       Margin="0,-5,0,0"/>
+            </VerticalStackLayout>
+
+            <!-- FOOTER -->
+            <HorizontalStackLayout Grid.Row="2"
+                                   HorizontalOptions="Center"
+                                   Margin="0,20,0,0"
+                                   Spacing="5">
+=======
+                    IsPassword="True" />
+
+                <HorizontalStackLayout Spacing="10" Margin="0,10">
+                    <CheckBox x:Name="TermsCheckBox" />
+                    <Label Style="{StaticResource AuthFormLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="I agree to the " />
+                                <Span Text="Terms &amp; Conditions" TextDecorations="Underline" FontAttributes="Bold" />
+                                <Span Text=" and " />
+                                <Span Text="Privacy Policy." TextDecorations="Underline" FontAttributes="Bold" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </HorizontalStackLayout>
+
+
+                <Button
+                    Text="Sign Up"
+                    Style="{StaticResource PrimaryButton}"
+                    Clicked="OnSignUpClicked"
+                    Margin="0,10,0,0" />
+
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="2"
+                HorizontalOptions="Center"
+                Spacing="5"
+                Margin="0,20,0,0">
+
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
+                <Label
+                    Text="Already have an account?"
+                    Style="{StaticResource AuthFormLabel}" />
+
+                <Label
+                    Text="Log In"
+<<<<<<< HEAD
+                    FontAttributes="Bold"
+=======
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
+                    Style="{StaticResource LinkLabel}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnLoginClicked"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+            </HorizontalStackLayout>
+
+        </Grid>
+    </ScrollView>
+<<<<<<< HEAD
+
+</ContentPage>
+=======
+</ContentPage>
+>>>>>>> 2c2e97432db390f6a9492ac824ce27e52bc47044
+>>>>>>> e65750449b65524b45e3e9a8482202d8c5d4600a
